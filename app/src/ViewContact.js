@@ -1,20 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function ViewContact() {
+function ViewContact({permanentContacts}) {
   const [name, setName] = useState(""); 
   const [foundContact, setFoundContact] = useState("");
   
   const findContact = (e) => {
     e.preventDefault();
-    //permanent contacts not available here
     permanentContacts.filter((contact) => {
       if(contact.name === name) {
         setFoundContact(contact);
         console.log("found contact", contact);
       }
     })
-    setNickname('');
+    setName('');
   }
   return (
     <div>
@@ -46,7 +45,6 @@ function ViewContact() {
           </thead>
           <tbody>
             <tr>
-              {/* id, nickname, species_id, record_timestamp */}
               <td>{foundContact.name}</td>
               <td>{foundContact.email}</td>
               <td>{foundContact.phone}</td>

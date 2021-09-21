@@ -48,8 +48,8 @@ const Home = () => {
       <h2>{process.env.REACT_APP_SUBTITLE}</h2>
       <Tasks />
       <Contacts contacts={contacts} />
-      <CreateContact loadContacts={loadContacts}/>
-      {/* <ViewContact /> */}
+      <CreateContact loadContacts={loadContacts} />
+      <ViewContact permanentContacts={permanentContacts} />
     </>
   )
 }
