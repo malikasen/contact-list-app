@@ -14,12 +14,12 @@ contactRouter.use(express.json());
 contactRouter.post("/", async (request, response) => {
   console.log("body", request.body);
   const params = {
-    name: request.body.name,
-    email: request.body.email,
-    phone: request.body.phone,
-    notes: request.body.notes,
+    name: request.body.newContact.name,
+    email: request.body.newContact.email,
+    phone: request.body.newContact.phone,
+    notes: request.body.newContact.notes,
   }
-  const contact = await db.addContact(request.body);
+  const contact = await db.addContact(params);
   response.status(201).json(contact);
 });
 
