@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 
 
 function Contacts({contacts}) {
-  
-  
-
-
   return (
     <div>
       <h3>Contact List</h3>

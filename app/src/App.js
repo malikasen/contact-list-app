@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import Tasks from "./Tasks";
 import Contacts from "./Contacts";
 import CreateContact from "./CreateContact";
 import ViewContact from "./ViewContact";
@@ -46,7 +45,6 @@ const Home = () => {
     <>
       <h1>{process.env.REACT_APP_TITLE}</h1>
       <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-      <Tasks />
       <Contacts contacts={contacts} />
       <CreateContact loadContacts={loadContacts} />
       <ViewContact permanentContacts={permanentContacts} />
