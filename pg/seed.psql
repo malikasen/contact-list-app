@@ -26,10 +26,10 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.contacts (
     id integer NOT NULL,
-    name character varying(255),
-    email character varying(255),
-    phone character varying(15),
-    notes character varying(500)
+    name text,
+    email text,
+    phone text,
+    notes text
 );
 
 
@@ -105,6 +105,9 @@ COPY public.contacts (id, name, email, phone, notes) FROM stdin;
 1	Malika	malika@example.com	555-555-5555	my own contact details
 2	Jane	jane@example.com	666-666-6666	Techtonica
 3	Alex	alex@example.com	777-777-7777	software engineer
+4	\N	\N	\N	\N
+5	test	test@test.com	444-444-4444	some notes
+6	test2	test2@gmail.com	888-888-8888	other notes
 \.
 
 
@@ -125,7 +128,7 @@ COPY public.tasks (id, name) FROM stdin;
 -- Name: contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.contacts_id_seq', 3, true);
+SELECT pg_catalog.setval('public.contacts_id_seq', 6, true);
 
 
 --
