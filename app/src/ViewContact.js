@@ -20,7 +20,7 @@ function ViewContact({permanentContacts}) {
       <h2>Search by name</h2>
       <form className='form-horizontal' action="#">
         <fieldset className="form-group row">
-          <label className="col-sm-2 control-label" for="name-search">Nickname</label>
+          <label className="col-sm-2 control-label" for="name-search">Name</label>
           <div className='col-sm-10'>
             <input type="text" id="name-search" className="form-control" value={name} onChange={(e) => setName(e.target.value)}/>
           </div>

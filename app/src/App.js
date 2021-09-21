@@ -45,7 +45,7 @@ const Home = () => {
     <>
       <h1>{process.env.REACT_APP_TITLE}</h1>
       <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-      <Contacts contacts={contacts} />
+      <Contacts contacts={contacts} loadContacts={loadContacts}/>
       <CreateContact loadContacts={loadContacts} />
       <ViewContact permanentContacts={permanentContacts} />
     </>
